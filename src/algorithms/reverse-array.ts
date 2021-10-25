@@ -3,11 +3,11 @@
  * Runs in O(n)
  * @param a - array of type any
  */
-export const reverse = <T>(a: T[]): T[] => {
+export default function reverse<T>(a: T[]): T[] {
   const N = a.length
   for (let i = 0; i < N / 2; ++i) {
     const tmp = a[i]
-    const other = N - 1 - i;
+    const other = N - 1 - i
     a[i] = a[other]
     a[other] = tmp
   }
