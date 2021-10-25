@@ -16,6 +16,8 @@ export default class BinarySearchTree<T> {
       this.root.insert(this.root, value, this.compareFn)
     }
   }
+
+  public print = (): void => { throw new Error('NotImplementedException') }
 }
 
 

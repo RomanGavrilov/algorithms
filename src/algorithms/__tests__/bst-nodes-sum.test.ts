@@ -1,5 +1,5 @@
-import BinarySearchTree from "../binary-serach-tree/binary-search-tree"
-import bst_nodes_sum from "../../algorithms/bst_nodes_sum"
+import BinarySearchTree from "../../datastructures/binary-serach-tree/binary-search-tree"
+import bst_nodes_sum from "../bst_nodes_sum"
 
 const compareFn = (a: number, b: number) => a - b
 const bst = new BinarySearchTree<number>(compareFn)
