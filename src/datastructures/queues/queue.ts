@@ -1,5 +1,9 @@
 import { LinkedListNode } from "../linked-list/linked-list-node"
 
+/**
+ * Queue implementation based on linked list
+ * Enqueue & Dequeue complexities O(1)
+ */
 export class Queue<T> {
   private front: LinkedListNode<T> = null
   private rear: LinkedListNode<T> = null
@@ -7,7 +11,7 @@ export class Queue<T> {
 
   /**
    * Add element to the end of the queue
-   * Runtime complexity O(1)
+   * Runs in O(1)
    * @param item - element to add
    */
   public enqueue = (item: T): void => {
@@ -25,6 +29,7 @@ export class Queue<T> {
 
   /**
    * Removes and returns first element in the queue
+   * Runs in O(1)
    * @returns first element from the queue
    */
   public dequeue = (): T => {
