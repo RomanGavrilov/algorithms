@@ -41,11 +41,13 @@ export class Queue<T> {
     return item.value
   }
 
-  public print = (): void => {
+  public print = (): void => this.traverse(node => console.log(node.value))
+
+  private traverse = (action: (node: LinkedListNode<T>) => void): void => {
     let p = this.front
     while (p) {
+      action(p)
       p = p.next
     }
   }
-
 }
