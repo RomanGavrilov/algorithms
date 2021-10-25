@@ -1,4 +1,4 @@
-import { BinarySearchTreeNode } from "../datastructures/binary-serach-tree"
+import { BinarySearchTreeNode } from "../datastructures/binary-serach-tree/binary-search-tree-node"
 
 export default function bst_nodes_sum(node: BinarySearchTreeNode<number>): number {
   if (!node) {
