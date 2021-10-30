@@ -2,7 +2,7 @@ import { LinkedListNode } from "../linked-list/linked-list-node"
 
 /**
  * Queue implementation based on linked list
- * Enqueue & Dequeue complexities O(1)
+ * Enqueue & Dequeue complexity O(1)
  */
 export class Queue<T> {
   private front: LinkedListNode<T> = null
@@ -46,8 +46,6 @@ export class Queue<T> {
     return item.value
   }
 
-  public print = (): void => this.traverse(node => console.log(node.value))
-
   private traverse = (action: (node: LinkedListNode<T>) => void): void => {
     let p = this.front
     while (p) {
@@ -55,4 +53,11 @@ export class Queue<T> {
       p = p.next
     }
   }
+
+  public toString = (): string => {
+    let str = ''
+    this.traverse(node => str = str.concat(`${node.value},`))
+    return str
+  }
+
 }
