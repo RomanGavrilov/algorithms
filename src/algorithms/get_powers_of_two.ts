@@ -4,10 +4,7 @@
  * @param n upper bound
  */
 export default function getPowersOfTwo(n: number, result: number[]): number {
-  if (n < 1) {
-    return 0
-  }
-  else if (n == 1) {
+  if (n == 1) {
     result.push(1)
     return 1
   }
