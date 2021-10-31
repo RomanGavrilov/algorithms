@@ -1,5 +1,5 @@
 /**
- * Prints all powers of 2 from 1 to n
+ * Collects all powers of 2 from 1 to n in a result array
  * Runs in O(log n)
  * @param n upper bound
  */
