@@ -31,3 +31,4 @@ function permute(s: string, prefix: string, permutations: string[]): void {
     }
   }
 }
+
