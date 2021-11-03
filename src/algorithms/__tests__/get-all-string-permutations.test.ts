@@ -1,4 +1,4 @@
-import getAllStringPermutations from "../get_all_string_permutations"
+import getAllStringPermutations from "../get-all-string-permutations"
 
 const s1 = 'abc'
 const p1 = ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
