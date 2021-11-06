@@ -1,4 +1,4 @@
-import { LinkedListNode } from "../linked-list/linked-list-node"
+import LinkedListNode from "../linked-list/linked-list-node"
 
 /**
  * Queue implementation based on linked list
@@ -59,5 +59,4 @@ export class Queue<T> {
     this.traverse(node => str = str.concat(`${node.value},`))
     return str
   }
-
 }

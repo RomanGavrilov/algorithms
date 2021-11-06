@@ -1,0 +1,30 @@
+import Stack from "../stack"
+
+it('should remove and return first element from the queue', () => {
+  const stack = new Stack<number>()
+  expect(stack.top()).toEqual(null)
+  expect(stack.size()).toEqual(0)
+
+  stack.push(1)
+  expect(stack.top()).toEqual(1)
+  expect(stack.size()).toEqual(1)
+  stack.push(2)
+  stack.push(2)
+  stack.push(7)
+  expect(stack.top()).toEqual(7)
+  expect(stack.size()).toEqual(4)
+  const last = stack.pop()
+  expect(last).toEqual(7)
+  stack.pop()
+  stack.pop()
+  expect(stack.top()).toEqual(1)
+  expect(stack.size()).toEqual(1)
+  stack.pop()
+  expect(stack.top()).toEqual(null)
+  expect(stack.size()).toEqual(0)
+  stack.pop()
+  stack.pop()
+  expect(stack.top()).toEqual(null)
+  expect(stack.size()).toEqual(0)
+})
+
