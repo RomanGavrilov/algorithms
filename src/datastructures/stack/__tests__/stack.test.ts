@@ -1,6 +1,6 @@
 import Stack from "../stack"
 
-it('should remove and return first element from the queue', () => {
+it('should push and pop elements from stack', () => {
   const stack = new Stack<number>()
   expect(stack.top()).toEqual(null)
   expect(stack.size()).toEqual(0)
