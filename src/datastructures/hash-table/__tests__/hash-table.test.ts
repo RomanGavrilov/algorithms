@@ -17,17 +17,18 @@ const users = [
 
 it('should add and find elements in a hash table', () => {
 
-  const mod = 3
+  const mod = 5
   const hash = (id: number) => id % mod
   const keySelector = (user: User) => user.id
   const hashTable = new HashTable<User, number>(mod, hash, keySelector)
 
   for (const user of users) {
     hashTable.add(user)
+    const findId = user.id
+    const storedUser = hashTable.get(findId)
+    expect(storedUser?.name).toEqual(users[findId - 1]?.name)
   }
-
-  const findId = 5
-  const user = hashTable.get(findId)
-
-  expect(user?.name).toEqual(users[findId - 1]?.name)
+  hashTable.add({id: 123456789, name: 'IIII'})
+  expect(hashTable.get(123456789).name).toEqual('IIII')
 })
+
