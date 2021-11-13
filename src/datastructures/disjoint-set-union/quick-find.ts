@@ -2,15 +2,13 @@ import DSU from "./disjoint-union-set";
 
 /**
  * Find is fast O(1) but union takes O(n) at most 2*N + 2 array accesses
+ * Trees are flat, but too expensive to keep them flat
  */
-export default class UnionFind implements DSU {
-  private id: number[]
+export default class QuickFind implements DSU {
+  private id: number[] = []
 
   constructor(N: number) {
-    this.id = new Array<number>(N)
-    for (let i = 0; i < N; ++i)
-      this.id[i] = i
-
+    Array.from({ length: N }, (_, i) => this.id[i] = i)
   }
 
   union(p: number, q: number): void {
