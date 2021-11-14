@@ -7,6 +7,6 @@
   },
   "scripts": {
     "build": "tsc --build ./tsconfig.json",
-    "test": "jest --watch"
+    "test": "jest --watch --silent=false"
   }
 }

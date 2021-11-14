@@ -15,15 +15,17 @@ export default class Stack<T> {
   }
 
   public pop = (): T => {
-    if (!this._size) {
+    if (this.isEmpty())
       return null
-    }
 
     const top = this._top
     this._top = top.next
     --this._size
+
     return top.value
   }
+
+  public isEmpty = (): boolean => !this._size
 
   public size = () => this._size
 }
